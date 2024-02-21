@@ -1,0 +1,14 @@
+/* Write your CSS here */
+.app-container {
+  height: 100vh;
+  display: flex;
+  background-color: aqua;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: antiquewhite;
+  width: 95%;
+  max-width: 345px;
+  padding: 20px;
+}
