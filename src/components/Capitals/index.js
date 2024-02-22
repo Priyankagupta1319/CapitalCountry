@@ -40,9 +40,18 @@ class Capitals extends Component {
     onChangeCapital = ()=>{
         this.setState({ActiveCapitalId: event.target.value})
     }
-    getCountry = ()=>{
-        const {ActiveCapitalId}= this.state
-        const activeCapitalCountry = countryAndCapitalsList.find(each=>(each.id == ActiveCapitalId
+    // getCountry = ()=>{
+    //     const {ActiveCapitalId}= this.state
+    //     const activeCapitalCountry = countryAndCapitalsList.find(each=>(each.id == ActiveCapitalId
+
+    getCountry = () => {
+    const {ActiveCapitalId} = this.state
+    const activeCapitalCountry = countryAndCapitalsList.find(
+      each => each.id === ActiveCapitalId,
+    )
+    // console.log(activeCapitalCountry)
+    return activeCapitalCountry.country     // return country for the selected capital
+  }
     
         render(){
             const {ActiveCapitalId} = this.state
@@ -69,11 +78,10 @@ class Capitals extends Component {
 
             <p>{country}</p>
           </div>
-          <p>Country</p>
         </div>
       </div>
     )
   }
 }
-}
+
 export default Capitals
